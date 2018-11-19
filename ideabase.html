@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <title>Ideabase | Casey Fawcett</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name"description" content="UX project Ideabase">
     <meta name="keywords" content="Saas, Casey Fawcett, UX Design, UX">
     <meta name="author" content="Casey Fawcett">
@@ -25,14 +25,14 @@
             <div class="menu">
               <a href="#">Menu</a>
             </div>
-            <!-- <div>
-              <ul>
+            <div class="exp_menu">
+              <ul class="menu_links">
                 <li><a href="index.html#work">Work</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="resume.html">Resume</a></li>
                 <li><a href="mailto:caseyfawcett@gmail.com">Contact</a></li>
               </ul>
-            </div> -->
+            </div>
         </nav>
         <!-- Hero -->
         <div>
@@ -222,15 +222,26 @@
                   <div>
                     <h4>Results</h4>
                   </div>
-                  <div class="chart_results">
+                  <div class="result-contain">
+                    <div class="chart1">
+                      <canvas id="favService"></canvas>
+                    </div>
+                    <div class="cl">
+                      <img class="cl_img" src="images/current_legend.png">
+                    </div>
+                    <div class="chart2">
+                      <canvas id="bestFeatures"></canvas>
+                    </div>
+                  </div>
+                  <!-- <div class="chart_results">
                     <div class="chart">
                       <p>Currently Used Services</p>
                       <div class="chart1">
                         <canvas id="currentService"></canvas>
                       </div>
-                      <div class="cl">
-                        <img src="images/current_legend.png">
-                      </div>
+                    </div>
+                    <div class="cl">
+                      <img src="images/current_legend.png">
                     </div>
                     <div class="chart">
                       <div class="uf">
@@ -240,7 +251,7 @@
                         <canvas id="mostUseful"></canvas>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
               </div>
               <!-- Percentage Results -->
@@ -587,44 +598,36 @@
                   <p>The main identity palette used colors that supported concepts of reliability and simplicity. Calm blue was used as the primary color and Burgeon black and secondary color.</p>
                 </div>
               </div>
-              <!-- <div class="color_grid">
-                <div class="col ccell1">#109AFE</div>
-                <div class="col ccell2">#109AFE</div>
-                <div class="col ccell3">#109AFE</div>
-                <div class="col ccell4">#109AFE</div>
-                <div class="col ccell5">#109AFE</div>
-                <div class="col ccell6">#109AFE</div>
-                <div class="col ccell7">#109AFE</div>
-                <div class="col ccell8">#109AFE</div>
-              </div> -->
-
-
-              <div class="swatch small">
-                  <div class="col1">
-                    <div class="colcont">#109AFE</div>
-                  </div>
-                  <div class="col2">
-                    <div class="colcont">#302C2C</div>
-                  </div>
-                  <div class="col3">
-                    <div class="colcont">#F0C048</div>
-                  </div>
-                  <div class="col4">
-                    <div class="colcont">#FF5F52</div>
-                  </div>
-                  <div class="col5">
-                    <div class="colcont">#5E5C5C</div>
-                  </div>
-                  <div class="col6">
-                    <div class="colcont">#ACA9A5</div>
-                  </div>
-                  <div class="col7">
-                    <div class="colcont">#EFEBE9</div>
-                  </div>
-                  <div class="col8">
-                    <div class="colcont">#F4F2F1</div>
-                  </div>
+              <div class="swatch_cont">
+                <div>
+                  <div class="swatch small">
+                      <div class="col1">
+                        <div class="colcont">#109AFE</div>
+                      </div>
+                      <div class="col2">
+                        <div class="colcont">#302C2C</div>
+                      </div>
+                      <div class="col3">
+                        <div class="colcont">#F0C048</div>
+                      </div>
+                      <div class="col4">
+                        <div class="colcont">#FF5F52</div>
+                      </div>
+                      <div class="col5">
+                        <div class="colcont">#5E5C5C</div>
+                      </div>
+                      <div class="col6">
+                        <div class="colcont">#ACA9A5</div>
+                      </div>
+                      <div class="col7">
+                        <div class="colcont">#EFEBE9</div>
+                      </div>
+                      <div class="col8">
+                        <div class="colcont">#F4F2F1</div>
+                      </div>
+                    </div>
                 </div>
+              </div>
             </div>
             <!-- Style Guide -->
             <div class="guide">
@@ -823,7 +826,7 @@
             </div>
         </footer>
     </div>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-    <script src="js/chart-data.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="js/chart-data.js"></script>
   </body>
 </html>

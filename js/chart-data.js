@@ -1,5 +1,5 @@
-var doughnutChart = document.getElementById("currentService").getContext('2d');
-  var currentService = new Chart(doughnutChart, {
+var doughnutChart = document.getElementById("favService").getContext('2d');
+  var favService = new Chart(doughnutChart, {
       type: 'doughnut',
       data: {
           labels: ["Google Drive", "Dropbox", "iCloud", "Pinterest", "One Drive", "Trello"],
@@ -41,8 +41,8 @@ var doughnutChart = document.getElementById("currentService").getContext('2d');
     }
 });
 
-var barChart = document.getElementById("mostUseful").getContext('2d');
-  var mostUseful = new Chart(barChart, {
+var barChart = document.getElementById("bestFeatures").getContext('2d');
+  var bestFeatures = new Chart(barChart, {
       type: 'horizontalBar',
       data: {
           labels: [ "Organizing content", "Saving Content", "Uploading Files", "Creating Files", "Scanning"],
@@ -58,12 +58,12 @@ var barChart = document.getElementById("mostUseful").getContext('2d');
                 'rgba(193, 189, 188, 1)'
               ],
               borderColor: [
-                  'rgba(16, 154, 245, 1)',
-                  'rgba(157, 197, 209, 1)',
-                  'rgba(255, 119, 119, 1)',
-                  'rgba(255, 214, 67, 1)',
-                  'rgba(118, 114, 115, 1)',
-                  'rgba(193, 189, 188, 1)'
+                  'rgba(255,99,132,1)',
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)',
+                  'rgba(75, 192, 192, 1)',
+                  'rgba(153, 102, 255, 1)',
+                  'rgba(255, 159, 64, 1)'
               ],
               borderWidth: 0
         }]
