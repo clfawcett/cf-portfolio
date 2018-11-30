@@ -31,6 +31,12 @@ body {
 
 nav {
   background-color: #fff;
+  grid-area: 2/1/2/1;
+  height: 10.8vh;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  z-index: 90;
 }
 
 footer {
@@ -51,12 +57,12 @@ header {
 
 footer {
   display: grid;
-  grid-area: 3/1/3/1;
+  grid-area: 4/1/4/1;
   grid-template-columns: repeat(6, 1fr);
 }
 
 .main {
-  grid-area: 2/1/2/1;
+  grid-area: 3/1/3/1;
 }
 
 .img {
@@ -185,7 +191,8 @@ strong{
 /**** buttons  ****/
 
 .h_menu_btn {
-  background-color: #F2EFED;
+  background-color: rgba(0,0,0,0);
+  padding: 3.8vh 6.4vw;
 
 }
 
@@ -195,12 +202,11 @@ strong{
 
 .nav_menu_btn {
   background-color: #fff;
+  padding: 3.8vh 6.4vw;
 }
 
 .nav_menu_btn:hover, .nav_menu_btn:focus {
-  background-color: #414141;
-  color: #fff;
-  padding: 3.7vh .8rem;
+  color: #3DA79A;
 }
 
 .closebtn {
@@ -212,13 +218,13 @@ strong{
 }
 
 .closebtn:hover, .closebtn:focus {
-  font-weight: 500;
+  /* font-weight: 500; */
 }
 
 .btn_small {
   align-items: center;
   display: flex;
-  height: 9.2vh;
+  height: 7.2rem;
   justify-content: center;
   width: 100%;
 }
@@ -292,19 +298,61 @@ strong{
 
 /**** nav menu  ****/
 
-.navbar, .heronav, .menu_nav {
-  align-items: center;
-  display: flex;
+nav ul {
+  background-color: #fff;
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+nav a {
+  display: block;
+  text-align: center;
+  padding: 2.8vh 6.4vw;
+}
+
+.nav_left {
+  float: left;
+}
+
+.nav_right {
+  float: right;
+}
+
+.menu_nav {
+align-items: center;
+display: flex;
+height: 10.8vh;
+justify-content: space-between;
+padding: 0 6.4vw;
+z-index: 80;
+}
+
+.heronav {
+  position: fixed;
   height: 10.8vh;
-  justify-content: space-between;
-  padding: 0 6.4vw;
+  width: 100%;
+}
+
+.heronav ul {
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+.heronav a {
+  display: block;
+  text-align: center;
+  padding: 2.8vh 6.4vw;
 }
 
 #menu_links {
   background-color: #414141;
   bottom: 0;
   display: none;
-  height: 100%;
+  height: 100vh;
   left: 0;
   position: fixed;
   top: 0;
@@ -367,7 +415,7 @@ strong{
 .herocon {
   display: flex;
   align-items: center;
-  height: 78.4vh;
+  height: 89.2vh;
   padding: 0 6.4vw;
 }
 
@@ -485,6 +533,7 @@ strong{
   grid-area: 1/1/1/7;
   min-height: 13.3vh;
   padding: 0 6.4vw;
+  z-index:2
 }
 
 .selected > h2 {
@@ -494,6 +543,7 @@ strong{
 .selected > p {
   /* max-width: 329r */
 }
+
 .inner_content {
   padding: 0 6.4vw;
 }
@@ -1482,4 +1532,8 @@ strong{
   grid-area: 4/1/4/7;
   justify-content: center;
   min-height: 6.4rem;
+}
+
+@media (min-height: 72px) {
+
 }

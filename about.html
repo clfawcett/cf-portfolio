@@ -19,34 +19,42 @@
   <body>
   <div class="wrapper">
     <header>
-        <!-- Nav -->
-        <nav class="navbar">
-            <a href="index.html" class="logo"><img src="images/logo_dark_m.png"></a>
-            <button onclick="openNavMenu()" id="slidebtn" class="btn nav_menu_btn">Menu</button>
-            <div id="menu_links">
-              <div class="menu_content" id="slideMenu">
-                <div class="menu_nav">
-                  <a href="index.html" class="logo"><img src="images/logo_white_m.png"></a>
-                  <button id="close_nav" onclick="closeNavMenu()" class="closebtn">x</button>
-                </div>
-                <ul class="nav_links">
-                  <li><a class="ml" href="index.html#work" onclick="closeNavMenu()">WORK</a></li>
-                  <li><a href="about.html">ABOUT</a></li>
-                  <li><a href="https://drive.google.com/file/d/1g1wevkK2bHBMXhWv-EJYvY8x9JPFa3S7/view?usp=sharing">RESUME</a></li>
-                  <li><a href="mailto:caseyfawcett@gmail.com">CONTACT</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="exp_menu">
-              <ul class="menu_links">
-                <li><a href="index.html#work">Work</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="mailto:caseyfawcett@gmail.com">Contact</a></li>
-              </ul>
-            </div>
-        </nav>
+      <div id="menu_links">
+        <div class="menu_content" id="slideMenu">
+          <div class="menu_nav">
+            <a href="index.html" class="logo"><img src="images/logo_white_m.png"></a>
+            <button id="close_nav" onclick="closeNavMenu()" class="closebtn">x</button>
+          </div>
+          <ul class="nav_links">
+            <li><a href="index.html#work" onclick="closeNavMenu()">WORK</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="https://drive.google.com/file/d/1g1wevkK2bHBMXhWv-EJYvY8x9JPFa3S7/view?usp=sharing">RESUME</a></li>
+            <li><a href="mailto:caseyfawcett@gmail.com">CONTACT</a></li>
+          </ul>
+        </div>
+      </div>
     </header>
+    <!-- Nav -->
+    <nav class="navbar">
+      <ul>
+        <li class="nav_left">
+          <a href="index.html" class="logo"><img src="images/logo_dark_m.png"></a>
+        </li>
+        <li class="nav_right">
+          <button onclick="openNavMenu()" id="slidebtn" class="nav_menu_btn btn">Menu</button>
+        </li>
+        <li class="nav_right">
+          <div class="exp_menu">
+            <ul class="menu_links">
+              <li><a href="index.html#work">Work</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="https://drive.google.com/file/d/1g1wevkK2bHBMXhWv-EJYvY8x9JPFa3S7/view?usp=sharing">Resume</a></li>
+              <li><a href="mailto:caseyfawcett@gmail.com">Contact</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
     <div class="main about">
       <section class="hero2">
         <!-- Hero -->
@@ -159,7 +167,7 @@
               <div class="oc3 cent_capt">
                 <p>Trying to fold origami</p>
               </div>
-            </div>            
+            </div>
             <div class="oi4">
               <img class="img_flx" src="images/about_cake_big.jpg">
               <div class="oc4 cent_capt">
