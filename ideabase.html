@@ -22,8 +22,20 @@
         <!-- Nav -->
         <nav class="navbar">
             <a href="index.html" class="logo"><img src="images/logo_dark_m.png"></a>
-            <div class="menu">
-              <a href="#">Menu</a>
+            <button onclick="openNavMenu()" id="slidebtn" class="btn nav_menu_btn">Menu</button>
+            <div id="menu_links">
+              <div class="menu_content" id="slideMenu">
+                <div class="menu_nav">
+                  <a href="index.html" class="logo"><img src="images/logo_white_m.png"></a>
+                  <button id="close_nav" onclick="closeNavMenu()" class="closebtn">x</button>
+                </div>
+                <ul class="nav_links">
+                  <li><a href="index.html#work" onclick="closeNavMenu()">WORK</a></li>
+                  <li><a href="about.html">ABOUT</a></li>
+                  <li><a href="https://drive.google.com/file/d/1g1wevkK2bHBMXhWv-EJYvY8x9JPFa3S7/view?usp=sharing">RESUME</a></li>
+                  <li><a href="mailto:caseyfawcett@gmail.com">CONTACT</a></li>
+                </ul>
+              </div>
             </div>
             <div class="exp_menu">
               <ul class="menu_links">
@@ -50,7 +62,7 @@
               </div>
             </div>
             <div class="btn_shell_proj">
-              <a href="ideabase.html" class="btn btn_small_dark">View Prototype</a>
+              <a href="ideabase.html" class="btn btn_small dark_btn">View Prototype</a>
             </div>
             <div class="hero_background"></div>
           </section>
@@ -797,5 +809,6 @@
     <script src="js/slideshow.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     <script src="js/chart-data.js"></script>
+    <script src="js/nav.js"></script>
   </body>
 </html>

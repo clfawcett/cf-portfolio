@@ -31,8 +31,20 @@
                   <a href="index.html">Casey <span class="logo_end">Fawcett</span></a>
                 </div>
               </div>
-              <div class="menu">
-                <a href="#">Menu</a>
+              <button onclick="openNavMenu()" id="slidebtn" class="btn h_menu_btn">Menu</button>
+              <div id="menu_links">
+                <div class="menu_content" id="slideMenu">
+                  <div class="menu_nav">
+                    <a href="index.html" class="logo"><img src="images/logo_white_m.png"></a>
+                    <button id="close_nav" onclick="closeNavMenu()" class="closebtn">x</button>
+                  </div>
+                  <ul class="nav_links">
+                    <li><a href="index.html#work" onclick="closeNavMenu()">WORK</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="https://drive.google.com/file/d/1g1wevkK2bHBMXhWv-EJYvY8x9JPFa3S7/view?usp=sharing">RESUME</a></li>
+                    <li><a href="mailto:caseyfawcett@gmail.com">CONTACT</a></li>
+                  </ul>
+                </div>
               </div>
             </div>
             <div class="herocon">
@@ -46,14 +58,26 @@
           <!-- Nav -->
           <nav class="navbar">
               <a href="index.html" class="logo"><img src="images/logo_dark_m.png"></a>
-              <div class="menu">
-                <a href="#">Menu</a>
+              <button onclick="openNavMenu()" id="slidebtn" class="nav_menu_btn btn">Menu</button>
+              <div id="menu_links">
+                <div class="menu_content" id="slideMenu">
+                  <div class="menu_nav">
+                    <a href="index.html" class="logo"><img src="images/logo_white_m.png"></a>
+                    <button id="close_nav" onclick="closeNavMenu()" class="closebtn">x</button>
+                  </div>
+                  <ul class="nav_links">
+                    <li><a href="index.html#work" onclick="closeNavMenu()">WORK</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="https://drive.google.com/file/d/1g1wevkK2bHBMXhWv-EJYvY8x9JPFa3S7/view?usp=sharing">RESUME</a></li>
+                    <li><a href="mailto:caseyfawcett@gmail.com">CONTACT</a></li>
+                  </ul>
+                </div>
               </div>
               <div class="exp_menu">
                 <ul class="menu_links">
                   <li><a href="index.html#work">Work</a></li>
                   <li><a href="about.html">About</a></li>
-                  <li><a href="resume.html">Resume</a></li>
+                  <li><a href="https://drive.google.com/file/d/1g1wevkK2bHBMXhWv-EJYvY8x9JPFa3S7/view?usp=sharing">Resume</a></li>
                   <li><a href="mailto:caseyfawcett@gmail.com">Contact</a></li>
                 </ul>
               </div>
@@ -79,7 +103,7 @@
                 </a>
             </div>
             <div class="btn_shell_feat">
-              <a href="ideabase.html" class="btn btn_small_dark">View Case</a>
+              <a href="ideabase.html" class="btn btn_small dark_btn">View Case</a>
             </div>
           </section>
       </div>
@@ -106,5 +130,6 @@
           </div>
       </footer>
     </div>
+    <script src="js/nav.js"></script>
   </body>
 </html>
