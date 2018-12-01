@@ -37,15 +37,31 @@
     <!-- Nav -->
     <nav class="navbar">
       <ul>
-        <li class="nav_left">
+        <li class="nav_logo">
           <a href="index.html" class="logo"><img src="images/logo_dark_m.png"></a>
         </li>
-        <li class="nav_right">
-          <button onclick="openNavMenu()" id="slidebtn" class="nav_menu_btn btn">Menu</button>
+        <li class="nav_menu">
+          <button onclick="openNavMenu()" id="slidebtn" class="nav_menu_btn btn hmenu">Menu</button>
         </li>
-        <li class="nav_right">
+        <li class="ml_menu">
+          <div id="menu_links">
+            <div class="menu_content" id="slideMenu">
+              <div class="menu_nav">
+                <a href="index.html" class="logo"><img src="images/logo_white_m.png"></a>
+                <button id="close_nav" onclick="closeNavMenu()" class="closebtn">x</button>
+              </div>
+              <ul class="nav_links">
+                <li><a href="index.html#work" onclick="closeNavMenu()">WORK</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="https://drive.google.com/file/d/1g1wevkK2bHBMXhWv-EJYvY8x9JPFa3S7/view?usp=sharing">RESUME</a></li>
+                <li><a href="mailto:caseyfawcett@gmail.com">CONTACT</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="nav_expmenu">
           <div class="exp_menu">
-            <ul class="menu_links">
+            <ul>
               <li><a href="index.html#work">Work</a></li>
               <li><a href="about.html">About</a></li>
               <li><a href="https://drive.google.com/file/d/1g1wevkK2bHBMXhWv-EJYvY8x9JPFa3S7/view?usp=sharing">Resume</a></li>

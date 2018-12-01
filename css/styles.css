@@ -218,7 +218,7 @@ strong{
 }
 
 .closebtn:hover, .closebtn:focus {
-  /* font-weight: 500; */
+  font-weight: 500;
 }
 
 .btn_small {
@@ -300,6 +300,8 @@ strong{
 
 nav ul {
   background-color: #fff;
+  display: flex;
+  justify-content: space-between;
   list-style: none;
   margin: 0;
   overflow: hidden;
@@ -309,16 +311,21 @@ nav ul {
 nav a {
   display: block;
   text-align: center;
-  padding: 2.8vh 6.4vw;
+  padding: 0 6.4vw;
 }
 
-.nav_left {
-  float: left;
+.ml_menu {
+  display: none;
 }
 
-.nav_right {
-  float: right;
+.nav_expmenu {
+  display: none;
 }
+
+.nav_logo {
+  padding: 2.8vh 0;
+}
+
 
 .menu_nav {
 align-items: center;
@@ -336,6 +343,8 @@ z-index: 80;
 }
 
 .heronav ul {
+  display: flex;
+  justify-content: space-between;
   list-style: none;
   margin: 0;
   overflow: hidden;
@@ -385,10 +394,6 @@ z-index: 80;
   color: #3DA79A;
 }
 
-
-.exp_menu {
-  display: none;
-}
 
 /**********  main content  **********/
 
@@ -1707,6 +1712,20 @@ z-index: 80;
 
   /**** buttons  ****/
 
+  .h_menu_btn {
+    background-color: rgba(0,0,0,0);
+    padding: 3.8vh 0;
+  }
+
+  .h_menu_btn:hover, .h_menu_btn:focus {
+    color: #3DA79A;
+  }
+
+  .nav_menu_btn {
+    background-color: #fff;
+    padding: 3.8vh 0;
+  }
+
   .btn_small_dark {
     align-items: center;
     background: #414141;
@@ -1719,37 +1738,56 @@ z-index: 80;
 
 
   /**** nav menu  ****/
-  .navbar, .heronav {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    padding: 2.8rem 0;
-  }
 
-  .logo {
-    grid-area: 1/2/1/2;
-  }
 
-  .menu {
+  #menu_links {
     display: none;
   }
 
-  .exp_menu {
-    display: flex;
-    grid-area: 1/8/1/12;
+  .nav_menu {
+    display: none;
   }
 
-  .menu_links {
+  .nav_expmenu {
     display: flex;
-    flex-basis: 50rem;
-    justify-content:space-between;
   }
+
+  nav a {
+    padding: 0
+  }
+
+  .heronav ul, nav ul {
+    padding: 0 8.47vw;
+  }
+
+  .heronav a {
+    padding: 2.8vh 0;
+  }
+
+  .nav_right {
+    display: none;
+  }
+
+  .exp_menu ul {
+    display: flex;
+    justify-content:space-between;
+    padding: 0;
+  }
+
+  .exp_menu a {
+    padding: 4.4vh 2.22vw;
+  }
+
+  .exp_menu a:hover, .exp_menu a:focus  {
+    color: #3DA79A;
+  }
+
 
   /**** Header ****/
 
   .hero_logo {
     align-items: center;
     display: flex;
-    grid-area: 1/2/1/5;
   }
 
   .logotype {
