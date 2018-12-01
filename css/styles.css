@@ -971,25 +971,70 @@ z-index: 80;
   height: auto;
 }
 
+.lg_left {
+  background-image: url("../images/brand_mindmap.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+}
+
+.lg_right {
+  background-image: url("../images/brand_sketch.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+}
+
 .cent_img {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 4.8rem;
+  background-image: url("../images/brand_logocomp_m.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 12.9vh;
+  margin-bottom: 7.2vh;
 }
 
 .lm_shell {
   background-color: #109AFE;
-  /* padding: 0 6.4vw; */
-  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  padding: 1.2rem 1.2rem 0 1.2rem;
 }
 
-.img_logomark {
+.lm_col {
+  display: flex;
+  flex: 100%;
+  flex-direction: column;
+  max-width:71.4rem;
+}
+
+.lm_col div {
+  padding-bottom: 1.2rem;
+}
+
+.lm_col .limg {
+  background-color: #fff;
+}
+
+.lm_col .limg_dk {
+  background-color: #302C2C;
+}
+
+
+
+
+
+
+
+/* .img_logomark {
   background-image: url("../images/brand_logomark_m.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: auto;
   height: 40vh;
-}
+} */
 
 /** Typography **/
 
@@ -1488,7 +1533,7 @@ z-index: 80;
   display: flex;
   flex-direction: column;
   grid-area: 1/1/1/7;
-  margin: 4.8vh 0 1.8vh;
+  margin: 4.8vh 0 1.8vh 0;
 }
 
 
@@ -1540,6 +1585,7 @@ z-index: 80;
 
 
 @media screen and (min-width: 700px) {
+
   .btn_shell_feat {
     display: flex;
     grid-area: 2/5/2/7;
@@ -1547,6 +1593,29 @@ z-index: 80;
     top: -4vh;
     z-index: 3;
   }
+
+  /** story **/
+
+  .logo_proc {
+    display: flex;
+    width: 100%;
+  }
+
+  .lg_left {
+    width: 50%;
+  }
+
+  .lg_right {
+    width: 50%;
+  }
+
+  .cent_img {
+    background-image: url("../images/brand_logocomp.jpg");
+  }
+
+
+
+  /** typography **/
 
   .typ_cont {
     display: flex;
@@ -1558,7 +1627,7 @@ z-index: 80;
     min-width: 39.4rem;
   }
 
-
+  /** color **/
 
   .swatch {
     display: grid;
@@ -2307,14 +2376,8 @@ z-index: 80;
     grid-area: 1/4/1/10;
   }
 
-  .lg_left {
-    grid-area: 2/1/2/7;
-    z-index: 2;
-  }
-
-  .lg_right{
-    grid-area: 2/6/2/13;
-    z-index: 1;
+  .logo_proc {
+    grid-area: 2/1/2/13;
   }
 
   .lg_img {
@@ -2326,17 +2389,20 @@ z-index: 80;
   }
 
   .cent_img {
+    background-image: url("../images/brand_logocomp.jpg");
     grid-area: 4/5/4/9;
+    height: 18.2vh;
   }
 
   .lm_shell {
     grid-area: 5/1/5/13;
+    padding: 4rem 0 2.8rem 0
   }
 
-  .img_logomark {
-    background-image: url(../images/brand_logomark.jpg);
-    height: 75vh
+  .lm_col {
+    grid-area: 1/4/1/10;
   }
+
 
   /** typography **/
 
@@ -2502,11 +2568,13 @@ z-index: 80;
 
   /**********     Footer      **********/
 
-  .topft {
-    grid-area: 1/5/1/9;
-    padding-bottom: 0;
+  .topft, .copy {
+    padding: 0;
   }
 
+  .topft {
+    grid-area: 1/5/1/9;
+  }
 
   .social {
     display: grid;
