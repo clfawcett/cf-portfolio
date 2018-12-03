@@ -1,36 +1,32 @@
-let mainNavLinks = document.querySelectorAll("nav");
-let mainSections = document.querySelectorAll("main section");
 
-let lastId;
-let cur = [];
+$(document).on('scroll', function() {
+  if ($(window).scrollTop() > 48) {
+    $('#lgtype').css('color', 'transparent');
+  } else {
+    $('#lgtype').css('color', '#414141');
+  }
 
-window.addEventListener("scroll", event => {
-  let fromTop = window.scrollY;
+// Change heronav logo into nav logo
 
-  mainNavLinks.forEach(link => {
-    let section = document.querySelector(link.hash);
+  let heroHeight = $('#hnav').outerHeight();
 
-    if (
-      section.offsetTop <= fromTop &&
-      section.offsetTop + section.offsetHeight > fromTop
-    ) {
-      link.classList.add("current");
-    } else {
-      link.classList.remove("current");
-    }
-  });
+  if ($(window).scrollTop() > heroHeight) {
+    $('#hlogo').css('opacity', '0');
+    $('#heromenu').css('opacity', '0');
+
+  } else {
+    $('#hlogo').css('opacity', '1');
+    $('#heromenu').css('opacity', '1');
+
+  }
+
+  let distance = $('nav').offset().top;
+
+  if( $(window).scrollTop() >= distance) {
+    $('#navlogo').css('opacity', '1');
+    $('#navmenu').css('opacity', '1');
+  } else {
+    $('#navlogo').css('opacity', '0');
+    $('#navmenu').css('opacity', '0');
+  }
 });
-
-
-
-
-
-var controller = new ScrollMagic.Controller();
-
-    new ScrollMagic.Scene({
-            triggerElement: "#slidein",
-            triggerHook: "onLeave",
-        })
-        .setPin("#slidein")
-        //.addIndicators() // add indicators (requires plugin)
-        .addTo(controller);
