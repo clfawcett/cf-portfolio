@@ -1322,10 +1322,29 @@ z-index: 80;
 .concl_img_back {
   background-image: linear-gradient(#BBDCE5, #109AFE);:
 }
-.concl_img_cont {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
+
+.cncl_desk_img {
+  background-image: url("../images/scroll_desktop_small.png");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 39.3rem;
+}
+
+.concl_phn_img1 {
+  background-image: url("../images/scroll_m_left_small.png");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 65rem;
+}
+
+.concl_phn_img2 {
+  background-image: url("../images/scroll_m_right_small.png");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 65rem;
 }
 
 
@@ -2588,7 +2607,46 @@ z-index: 80;
   }
 
   .concl_img_back {
-    grid-area: 1/1/1/13;
+    display: grid;
+    grid-area: 1/2/1/12;
+    grid-column-gap: 1.2rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ci1 {
+    grid-area: 1/1/1/3;
+  }
+
+  .ci2 {
+    grid-area: 2/1/2/2;
+  }
+
+  .ci3 {
+    grid-area: 2/2/2/3;
+  }
+
+  .cncl_desk_img {
+    background-image: url("../images/scroll_desktop.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 86.7rem;
+  }
+
+  .concl_phn_img1 {
+    background-image: url("../images/scroll_m_left.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 65rem;
+  }
+
+  .concl_phn_img2 {
+    background-image: url("../images/scroll_m_right.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 65rem;
   }
 
   .concl_shell {
@@ -2724,12 +2782,7 @@ z-index: 80;
       flex-direction: row;
     }
 
-    .o_top, .o_bot {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .oi1, .oi3, .oi2 {
+    .oi2 {
       margin-right: 1.2rem;
     }
 
