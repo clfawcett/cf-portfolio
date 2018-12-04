@@ -1601,6 +1601,39 @@ z-index: 80;
     z-index: 3;
   }
 
+  /** research **/
+  .chart1 {
+    grid-area: 2/3/2/5;
+
+  }
+
+  .chart2 {
+    grid-area: 5/3/5/5;
+  }
+
+  .percent1, .percent2, .percent3, .percent4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  }
+
+  .percent1 {
+    grid-area: 1/2/1/3;
+  }
+
+  .percent2 {
+    grid-area: 1/3/1/4;
+  }
+
+  .percent3 {
+    grid-area: 1/4/1/5;
+  }
+
+  .percent4 {
+    grid-area: 1/5/1/6;
+  }
+
+
 
   /** story **/
 
