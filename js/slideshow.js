@@ -16,19 +16,3 @@ function showDivs(n) {
     x[slideIndex-1].style.display = "block";
     setTimeout(showSlide, 4000);
 }
-
-
-// var slideIndex = 0;
-// slideShow();
-//
-// function slideShow() {
-//     var i;
-//     var slides = document.getElementsByClassName("sgSlides");
-//     for (i = 0; i < slides.length; i++) {
-//        slides[i].style.display = "none";
-//     }
-//     slideIndex++;
-//     slides[slideIndex-1].style.display = "block";
-//
-//     setTimeout(slideShow, 5000);
-// }

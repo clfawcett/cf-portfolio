@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
   </head>
   <body>
-    <div class="container">
+    <div class="container load_cont"  id="load">
       <header class="header">
         <div id="menu_links">
           <div class="menu_content" id="slideMenu">
@@ -38,26 +38,10 @@
       <nav class="navbar">
         <ul>
           <li class="nav_logo">
-            <a href="index.html" class="logo"><img src="images/logo_dark_m.svg"></a>
+            <a href="index.html" class="logo"><img id="navlogo" src="images/logo_dark_m.svg"></a>
           </li>
-          <li class="nav_menu">
+          <li class="nav_menu" id="navmenu">
             <button onclick="openNavMenu()" id="slidebtn" class="nav_menu_btn btn hmenu">Menu</button>
-          </li>
-          <li class="ml_menu">
-            <div id="menu_links">
-              <div class="menu_content" id="slideMenu">
-                <div class="menu_nav">
-                  <a href="index.html" class="logo"><img src="images/logo_white_m.png"></a>
-                  <button id="close_nav" onclick="closeNavMenu()" class="closebtn">x</button>
-                </div>
-                <ul class="nav_links">
-                  <li><a href="index.html#work" onclick="closeNavMenu()">WORK</a></li>
-                  <li><a href="about.html">ABOUT</a></li>
-                  <li><a href="https://drive.google.com/file/d/1g1wevkK2bHBMXhWv-EJYvY8x9JPFa3S7/view?usp=sharing">RESUME</a></li>
-                  <li><a href="mailto:caseyfawcett@gmail.com">CONTACT</a></li>
-                </ul>
-              </div>
-            </div>
           </li>
           <li class="nav_expmenu">
             <div class="exp_menu">
@@ -148,14 +132,14 @@
                     </div>
                   </div>
               </div>
-              <div class="si">
+              <div class="si sectleft">
                 <img class="si_img" src="images/ideabase_solution.png">
               </div>
             </div>
           </section>
           <!-- Section - Process -->
           <section class="process">
-            <div class="section">
+            <div class="project">
               <div class="center">
                 <h2>PROCESS</h2>
               </div>
@@ -267,7 +251,7 @@
                     <div class="center">
                       <h4>Results</h4>
                     </div>
-                    <div class="result-contain">
+                    <div class="result-contain project">
                       <div class="chart1_title">
                         <p>Currently Used Services</p>
                       </div>
@@ -287,7 +271,7 @@
                   </div>
                 </div>
                 <!-- Percentage Results -->
-                <div class="percent_grid section">
+                <div class="percent_grid project">
                     <div class="percent1">
                       <div class="p1">
                         <h3>90%</h3>
@@ -322,7 +306,7 @@
                     </div>
                   </div>
                 <!-- Insights -->
-                <div class="insight">
+                <div class="insight sectright">
                   <div class="insight_inner">
                     <h4>Insights</h4>
                     <p>The survey responses revealed that people primarily use cloud storage to collaborate and share with others.  Users are frustrated with current organization tools, the process of saving web content, and uploading files. How might a solution enable a solution that increases user efficiency and and the ability of users to collaborate?</p>
@@ -345,7 +329,7 @@
             </div>
             <div class="pers_cont section">
               <!-- First User Persona -->
-              <div class="persona pers_one">
+              <div class="persona pers_one project">
                 <div>
                   <div class="per_h">
                     <div class="perh1">
@@ -395,7 +379,7 @@
                 </div>
               </div>
               <!-- Second User Persona -->
-              <div class="persona pers_two">
+              <div class="persona pers_two project">
                 <div>
                   <div class="h_shell">
                     <div class="per_h">
@@ -459,7 +443,7 @@
                 </div>
               </div>
               <!-- Icons -->
-              <div class="us_grid">
+              <div class="us_grid project">
                 <div class="us1">
                   <div class="usi">
                     <img src="images/icon_uploading.svg" alt="An illustration of a two files.">
@@ -519,10 +503,10 @@
               <!-- User Flows -->
               <div class="user_flows section">
                 <div class="uf_img_cont">
-                  <div class="uf_img_shell">
+                  <div class="uf_img_shell project">
                     <img class="uf_img" src="images/flow_sketch.jpg" alt="Pencil drawings of two possible user flows of uploading a file.">
                   </div>
-                  <div class="uf_img_shell">
+                  <div class="uf_img_shell project">
                     <img class="uf_img" src="images/flow_render.jpg" alt="Computer drawing with red denoting start and end and blue showing decisions of uploading file.">
                   </div>
                 </div>
@@ -583,8 +567,8 @@
                 <div class="sub_sec logo_shell section">
                   <p>The Ideabase logo is built on three concepts:  an abstraction of the letters i and b, a project container housing your thoughts and ideas, and the concept of connection.</p>
                 </div>
-                <div class="cent_img section"></div>
-                <div class="lm_shell section">
+                <div class="cent_img"></div>
+                <div class="lm_shell project">
                   <div class= "lm_col">
                     <div>
                       <img class="limg" src="images/lg_prim.svg" alt="Primary horizontal logo"/>
@@ -623,7 +607,7 @@
                     <h3>Colors</h3>
                     <p>The main identity palette used colors that supported concepts of reliability and simplicity. Calm blue was used as the primary color and Burgeon black and secondary color.</p>
                 </div>
-                <div class="swatch_cont">
+                <div class="swatch_cont sectright">
                   <div class="shell">
                     <div class="swatch small">
                         <div class="col1">
@@ -655,7 +639,7 @@
                 </div>
               </div>
               <!-- Style Guide -->
-              <div class="guide grid section">
+              <div class="guide grid project">
                 <div class="sub_sec guide_shell">
                   <div class="guide_inner">
                     <h3>Style Guide</h3>
@@ -781,14 +765,14 @@
               </div>
             </div>
             </section>
-          <section class="conclusion grid section">
+          <section class="conclusion grid project">
             <!-- Conclusion -->
-              <div class="concl_img_back ">
-                <div class="cncl_desk_img ci1" alt="A geometric, landing page mostly composed on primary colors on a laptop screen">
+              <div class="concl_img_back">
+                <div class="cncl_desk_img ci1">
                 </div>
-                <div class="concl_phn_img1 ci2" alt="A geometric, landing page mostly composed on primary colors on a laptop screen">
+                <div class="concl_phn_img1 ci2">
                 </div>
-                <div class="concl_phn_img2 ci3" alt="A geometric, landing page mostly composed on primary colors on a laptop screen">
+                <div class="concl_phn_img2 ci3">
                 </div>
               </div>
               <div class="sub_sec concl_shell section">

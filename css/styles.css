@@ -29,14 +29,10 @@ body {
   font-weight: 400;
 }
 
-header {
-  grid-area: 1/1/1/1;
-}
 
 nav {
   background-color: #fff;
   box-shadow: 0 .4rem 1.2rem rgba(65, 65, 65, .05);
-  grid-area: 2/1/2/1;
   height: 10.8vh;
   position: -webkit-sticky;
   position: sticky;
@@ -54,19 +50,27 @@ footer {
   text-align: center;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: 1fr;
-  margin: 0;
-}
-
 .main {
-  grid-area: 3/1/3/1;
+  position: relative;
+  z-index: 2;
 }
 
 .img {
   vertical-align: center;
 }
+
+.load_cont {
+  opacity: 0;
+  transition: all .5s ease;
+  transform: translateX(50px);
+}
+
+.load_cont.fade-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
 
 /**** typography ****/
 
@@ -317,16 +321,11 @@ strong{
 
 /**** header  ****/
 
-
-.header {
-  /* background-color: #F2EFED; */
-  transition: background-color 1s ease;
-}
-
 .tempnav {
   height: 10.8vh;
   position: absolute;
   width: 100%;
+  z-index: 2;
 }
 
 .tempnav ul {
@@ -349,15 +348,17 @@ strong{
   background-color: #F2EFED;
   display: flex;
   padding: 0 6.4vw;
+  position: relative;
   min-height: 89.2vh;
   transition: all 1s ease-out;
+  z-index: 1;
+
 }
 
 .header_content.bg-change {
   background-color: #414141;
+  z-index: 1;
 }
-
-
 
 #lgtype {
   transition: color .2s;
@@ -443,14 +444,6 @@ nav a {
   max-width: 4rem;
 }
 
-#navlogo {
-  opacity: 1;
-}
-
-#navmenu {
-  opacity: 1;
-}
-
 
 
 
@@ -488,19 +481,8 @@ nav a {
   padding: 2.4rem 0;
 }
 
-.project {
-  opacity: 1;
-  transform: translateY(50px);
-  transition: all 1s ease-out;
-}
-
-.project.fade-in {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 .section {
-  opacity: 1;
+  opacity: 0;
   transition: all 1s ease-out;
 }
 
@@ -556,8 +538,20 @@ nav a {
   z-index: 3;
 }
 
-#work {
-  background: #F2EFED;
+
+.selected {
+  align-items: center;
+  background-color: #F2EFED;
+  display: flex;
+  grid-area: 1/1/1/7;
+  min-height: 13.3vh;
+  padding: 0 6.4vw;
+  position: relative;
+  z-index: 2;
+}
+
+.selected > h2 {
+  margin-bottom: 0;
 }
 
 
@@ -626,25 +620,41 @@ nav a {
   z-index: 2;
 }
 
-
-.selected {
-  align-items: center;
-  background-color: #F2EFED;
-  display: flex;
-  grid-area: 1/1/1/7;
-  min-height: 13.3vh;
-  padding: 0 6.4vw;
-  position: relative;
-
+.project {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
 }
 
-.selected > h2 {
-  margin-bottom: 0;
+.project.fade-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.selected > p {
-  /* max-width: 329r */
+.sectright {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 1s ease-out;
 }
+
+.sectright.fade-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+.sectleft {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 1s ease-out;
+}
+
+.sectleft.fade-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
 
 .inner_content {
   padding: 0 6.4vw;
@@ -1435,6 +1445,7 @@ nav a {
 
 .beginning {
   grid-area: 3/1/3/7;
+  position: relative;
 }
 
 .beg_shell {
@@ -1479,6 +1490,7 @@ nav a {
 
 .power {
   grid-area: 4/1/4/7;
+  position: relative;
 }
 
 .pow_shell {
@@ -1498,6 +1510,7 @@ nav a {
 
 .change_dir {
   grid-area: 5/1/5/7;
+  position: relative;
 }
 
 .ch_dr_shell {
@@ -1531,6 +1544,7 @@ nav a {
 
 .arrival {
   grid-area: 6/1/6/7;
+  position: relative;
 }
 
 
@@ -1538,6 +1552,7 @@ nav a {
 
 .other_things {
   grid-area: 7/1/7/7;
+  position: relative;
 }
 
 .other_grid {
@@ -1718,13 +1733,6 @@ nav a {
 @media screen and (min-width: 1025px) {
 
 
-  .container {
-    display: grid;
-    grid-column-gap: 1.2rem;
-    grid-template-columns: repeat(12, 1fr);
-  }
-
-
   header {
     grid-area: 1/1/1/13;
   }
@@ -1740,12 +1748,10 @@ nav a {
     grid-template-columns: repeat(12, 1fr);
   }
 
-  .main {
-    grid-area: 3/1/3/13;
-    display: grid;
-    grid-column-gap: 1.2rem;
-    grid-template-columns: repeat(12, 1fr);
+  .home {
+    background-color: #F2EFED;
   }
+
 
 
 /**** Typography ****/
@@ -1896,6 +1902,7 @@ nav a {
     grid-template-columns: repeat(12, 1fr);
   }
 
+
   /***** Hero *****/
 
 
@@ -1936,12 +1943,9 @@ nav a {
 
   /***** main *****/
 
-  .home {
-    background: #F2EFED;
-  }
 
   .selected {
-    background-color: none;
+    background-color: #F2EFED;
     grid-area: 1/2/1/12;
     padding: 0;
   }
