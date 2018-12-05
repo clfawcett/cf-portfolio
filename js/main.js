@@ -6,27 +6,27 @@ $(document).on('scroll', function() {
     $('#lgtype').css('color', '#414141');
   }
 
-// Change heronav logo into nav logo
+Change heronav logo into nav logo
 
-  let heroHeight = $('#hnav').outerHeight();
+  // let heroHeight = $('#hnav').outerHeight();
+  //
+  // if ($(window).scrollTop() > heroHeight) {
+  //   $('#hlogo').css('opacity', '0');
+  //   $('#heromenu').css('opacity', '0');
+  //
+  // } else {
+  //   $('#hlogo').css('opacity', '1');
+  //   $('#heromenu').css('opacity', '1');
+  //
+  // }
 
-  if ($(window).scrollTop() > heroHeight) {
-    $('#hlogo').css('opacity', '0');
-    $('#heromenu').css('opacity', '0');
-
-  } else {
-    $('#hlogo').css('opacity', '1');
-    $('#heromenu').css('opacity', '1');
-
-  }
-
-  let distance = $('nav').offset().top;
-
-  if( $(window).scrollTop() >= distance) {
-    $('#navlogo').css('opacity', '1');
-    $('#navmenu').css('opacity', '1');
-  } else {
-    $('#navlogo').css('opacity', '0');
-    $('#navmenu').css('opacity', '0');
-  }
-});
+//   let distance = $('#mainnav').offset().top;
+//
+//   if( $(window).scrollTop() >= distance) {
+//     $('#navlogo').css('opacity', '1');
+//     $('#navmenu').css('opacity', '1');
+//   } else {
+//     $('#navlogo').css('opacity', '0');
+//     $('#navmenu').css('opacity', '0');
+//   }
+// });

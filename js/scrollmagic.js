@@ -1,28 +1,21 @@
-// BG Animation Setup
-// .to('@target', @length, {@object})
-var bg_tween = TweenMax.to('#bg-trigger', 1, {
-  backgroundColor: '#FFA500',
-  ease: Linear.easeNone
-});
+$(document).ready(function(){
+  //init ScrollMagic
+  var controller = new ScrollMagic.Controller();
 
-//init controller
-var controller = new ScrollMagic.Controller();
 
-//create Scene
-var containerScene1 = new ScrollMagic.Scene ({
-  triggerElement: '#herotop', //Starting scene
-  duration: 900
+
+  //build background color scene
+  var bgColorScene = new ScrollMagic.Scene({
+    triggerElement: '#headbg p',
+    triggerHook: 0.2
+  })
+  .setClassToggle('#headbg', 'bg-change')
+  .addIndicators({
+    name: 'bg change',
+    colorTrigger: 'black',
+    colorStart: 'green',
+    colorEnd: 'pink'
+  })
+  .addTo(controller);
+
 })
-.setTween(blockTween1);
-
-var containerScene2 = new ScrollMagic.Scene ({
-  triggerElement: '#herotop'
-})
-.setTween(blockTween2);
-
-controller.addScene([
-  containerScene1,
-  containerScene2,
-]);
-
-});
