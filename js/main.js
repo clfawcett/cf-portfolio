@@ -1,36 +1,22 @@
-let mainNavLinks = document.querySelectorAll("nav");
-let mainSections = document.querySelectorAll("main section");
 
-let lastId;
-let cur = [];
+  let heroHeight = $('#hnav').outerHeight();
 
-window.addEventListener("scroll", event => {
-  let fromTop = window.scrollY;
+  if ($(window).scrollTop() > heroHeight) {
+    $('#hlogo').css('opacity', '0');
+    $('#heromenu').css('opacity', '0');
 
-  mainNavLinks.forEach(link => {
-    let section = document.querySelector(link.hash);
+  } else {
+    $('#hlogo').css('opacity', '1');
+    $('#heromenu').css('opacity', '1');
+  }
 
-    if (
-      section.offsetTop <= fromTop &&
-      section.offsetTop + section.offsetHeight > fromTop
-    ) {
-      link.classList.add("current");
-    } else {
-      link.classList.remove("current");
-    }
-  });
+  let distance = $('nav').offset().top;
+
+  if( $(window).scrollTop() >= distance) {
+    $('#navlogo').css('opacity', '1');
+    $('#navmenu').css('opacity', '1');
+  } else {
+    $('#navlogo').css('opacity', '0');
+    $('#navmenu').css('opacity', '0');
+  }
 });
-
-
-
-
-
-var controller = new ScrollMagic.Controller();
-
-    new ScrollMagic.Scene({
-            triggerElement: "#slidein",
-            triggerHook: "onLeave",
-        })
-        .setPin("#slidein")
-        //.addIndicators() // add indicators (requires plugin)
-        .addTo(controller);
