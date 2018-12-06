@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
   </head>
   <body>
-  <div class="wrapper">
+  <div class="container load_cont">
     <header>
       <div id="menu_links">
         <div class="menu_content" id="slideMenu">
@@ -37,15 +37,15 @@
     <!-- Nav -->
     <nav class="navbar">
       <ul>
-        <li class="nav_left">
-          <a href="index.html" class="logo"><img src="images/logo_dark_m.png"></a>
+        <li class="nav_logo">
+          <a href="index.html" class="logo"><img id="navlogo" src="images/logo_dark_m.svg"></a>
         </li>
-        <li class="nav_right">
-          <button onclick="openNavMenu()" id="slidebtn" class="nav_menu_btn btn">Menu</button>
+        <li class="nav_menu" id="navmenu">
+          <button onclick="openNavMenu()" id="slidebtn" class="nav_menu_btn btn hmenu">Menu</button>
         </li>
-        <li class="nav_right">
+        <li class="nav_expmenu">
           <div class="exp_menu">
-            <ul class="menu_links">
+            <ul>
               <li><a href="index.html#work">Work</a></li>
               <li><a href="about.html">About</a></li>
               <li><a href="https://drive.google.com/file/d/1g1wevkK2bHBMXhWv-EJYvY8x9JPFa3S7/view?usp=sharing">Resume</a></li>
@@ -63,7 +63,8 @@
         </div>
         <!-- Intro -->
         <div class="about_content">
-          <div class="inner_content light">
+          <div class="inner_content">
+
             <h1>My Story</h1>
             <p class="description">I'm Casey Fawcett, a UX Designer with a background in architectural design.</p>
           </div>
@@ -74,14 +75,15 @@
         <div class="about_background"></div>
       </section>
       <!--The Beginning -->
-      <section class="beginning ab_grid grid">
+      <section class="beginning ab_grid grid section">
+
         <div class="sub_sec beg_shell">
           <div>
             <h2>01 The Beginning</h2>
             <p>Since I was a kid, I’ve had a pencil in my hand using my observations to help me understand how the world fits together.  In high school, I dreamed of becoming an animator and signed up for classes and spent all my breaks learning Photoshop, HTML, and C++.  A month before graduating, I was invited to an architectural critique of a series of projects proposing disaster relief housing built from shipping containers.  For the first time, I realized the impact design could have on people, and ended up changing my major from Computer Science to Architecture after my first year of college.</p>
           </div>
         </div>
-        <div class="sketch_shell grid">
+        <div class="sketch_shell">
           <div class="beg_img">
             <div class"beg_left">
               <img class="img_flx br" src="images/about_pencil.jpg">
@@ -97,7 +99,7 @@
 
       </section>
       <!--Power of Design -->
-      <section class="power ab_grid grid">
+      <section class="power ab_grid grid section">
         <div class="sub_sec pow_shell">
           <div>
             <h2>02 Power of Design</h2>
@@ -116,7 +118,7 @@
         </div>
       </section>
       <!--Changing Direction -->
-      <section class="change_dir ab_grid grid">
+      <section class="change_dir ab_grid grid section">
         <div class="sub_sec ch_dr_shell">
           <div>
             <h2>03 Changing Direction</h2>
@@ -133,7 +135,7 @@
         </div>
       </section>
       <!--Arrival-->
-      <section class="arrival grid">
+      <section class="arrival grid section">
         <div class="sub_sec arr_shell">
           <div>
             <h2>04 Arrival</h2>
@@ -142,7 +144,7 @@
         </div>
       </section>
       <!--Other Things-->
-      <section class="other_things grid">
+      <section class="other_things section">
         <div class="center">
           <h2>Other Things I Love</h2>
         </div>
@@ -201,6 +203,12 @@
         </div>
     </footer>
     </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/scrollmagic.js"></script>
     <script src="js/nav.js"></script>
   </body>
 </html>
