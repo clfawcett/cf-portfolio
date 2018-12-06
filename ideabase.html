@@ -19,13 +19,33 @@
   <body>
     <div class="container load_cont"  id="load">
       <header class="header">
+        <nav class="navbar">
+          <ul>
+            <li class="nav_logo">
+              <a href="index.html" class="logo"><img id="navlogo" src="images/logo_dark_m.svg"></a>
+            </li>
+            <li class="nav_menu" id="navmenu">
+              <button onclick="openNavMenu()" id="slidebtn" class="nav_menu_btn btn hmenu">Menu</button>
+            </li>
+            <li class="nav_expmenu">
+              <div class="exp_menu">
+                <ul>
+                  <li><a href="index.html#work">Work</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="https://drive.google.com/file/d/1g1wevkK2bHBMXhWv-EJYvY8x9JPFa3S7/view?usp=sharing">Resume</a></li>
+                  <li><a href="mailto:caseyfawcett@gmail.com">Contact</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
         <div id="menu_links">
           <div class="menu_content" id="slideMenu">
-            <div class="menu_nav">
+            <div class="menu_navbar">
               <a href="index.html" class="logo"><img src="images/logo_white_m.png"></a>
               <button id="close_nav" onclick="closeNavMenu()" class="closebtn">x</button>
             </div>
-            <ul class="nav_links">
+            <ul class="menu_nav_links">
               <li><a href="index.html#work" onclick="closeNavMenu()">WORK</a></li>
               <li><a href="about.html">ABOUT</a></li>
               <li><a href="https://drive.google.com/file/d/1g1wevkK2bHBMXhWv-EJYvY8x9JPFa3S7/view?usp=sharing">RESUME</a></li>
@@ -35,26 +55,6 @@
         </div>
       </header>
       <!-- Nav -->
-      <nav class="navbar">
-        <ul>
-          <li class="nav_logo">
-            <a href="index.html" class="logo"><img id="navlogo" src="images/logo_dark_m.svg"></a>
-          </li>
-          <li class="nav_menu" id="navmenu">
-            <button onclick="openNavMenu()" id="slidebtn" class="nav_menu_btn btn hmenu">Menu</button>
-          </li>
-          <li class="nav_expmenu">
-            <div class="exp_menu">
-              <ul>
-                <li><a href="index.html#work">Work</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="https://drive.google.com/file/d/1g1wevkK2bHBMXhWv-EJYvY8x9JPFa3S7/view?usp=sharing">Resume</a></li>
-                <li><a href="mailto:caseyfawcett@gmail.com">Contact</a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </nav>
       <div class="main">
           <!-- Section - Hero -->
           <section class="hero2">
@@ -491,7 +491,6 @@
                 <img src="images/03.png">
               </div>
               <div class="sub_sec uf_shell section">
-
                 <div>
                   <h2 class="ib_h">03_Information Architecture</h2>
                   <h3> User Flows & Sitemaps</h3>
@@ -825,9 +824,10 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js"></script>
       <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <script src="js/scrollmagic.js"></script>
-      <script src="js/slideshow.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-      <script src="js/chart-data.js"></script>
-      <script src="js/nav.js"></script>
+    <script src="js/slideshow.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="js/chart-data.js"></script>
+    <script src="js/nav.js"></script>
   </body>
 </html>
+
