@@ -29,14 +29,16 @@ body {
   font-weight: 400;
 }
 
+header {
+  position: relative;
+}
+
 
 nav {
   background-color: #fff;
   box-shadow: 0 .4rem 1.2rem rgba(65, 65, 65, .05);
   height: 10.8vh;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0px;
+  position: relative;
   z-index: 4;
 }
 
@@ -55,8 +57,8 @@ footer {
   z-index: 2;
 }
 
-header {
-  grid-area: 1/1/1/1;
+.img {
+  vertical-align: center;
 }
 
 .load_cont {
@@ -69,6 +71,7 @@ header {
   opacity: 1;
   transform: translateX(0);
 }
+
 
 
 /**** typography ****/
@@ -317,17 +320,6 @@ strong{
   color: rgba(65,65,65,1);
 }
 
-#menu_links {
-  background-color: #414141;
-  bottom: 0;
-  display: none;
-  height: 100vh;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 99;
-}
 
 /**** header  ****/
 
@@ -378,6 +370,38 @@ strong{
   transition: all .3s;
 }
 
+
+
+/**** nav menu  ****/
+
+nav ul {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+nav a {
+  display: block;
+  text-align: center;
+  padding: 0 6.4vw;
+}
+
+
+.nav_expmenu {
+  display: none;
+}
+
+.nav_logo {
+  padding: 2.8vh 0;
+  position: relative;
+  width: 100%;
+  max-width: 4rem;
+}
+
 .menu_navbar {
 align-items: center;
 display: flex;
@@ -385,7 +409,6 @@ height: 10.8vh;
 justify-content: space-between;
 padding: 0 6.4vw;
 }
-
 
 #menu_links {
   background-color: #414141;
@@ -398,7 +421,6 @@ padding: 0 6.4vw;
   width: 100%;
   z-index: 10;
 }
-
 
 .menu_content {
   color: #fff;
@@ -424,37 +446,11 @@ padding: 0 6.4vw;
   color: #3DA79A;
 }
 
-
-/**** nav menu  ****/
-
-nav ul {
-  background-color: #fff;
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-  margin: 0;
-  overflow: hidden;
-  padding: 0;
-}
-
-nav a {
-  display: block;
-  text-align: center;
-  padding: 0 6.4vw;
-}
-
-.nav_expmenu {
-  display: none;
-}
-
-.nav_logo {
-  padding: 2.8vh 0;
-  position: relative;
+#subnav {
+  position: fixed;
   width: 100%;
-  max-width: 4rem;
+  top:0;
 }
-
-
 
 
 /**********  main content  **********/
@@ -858,20 +854,17 @@ nav a {
 
 .chart1_title {
   grid-area: 1/2/1/6
-
 }
 
 .chart1 {
   grid-area: 2/2/2/6;
 
-
 }
 
-.percent1, .percent2, .percent3, .percent4 {
+.cl {
   display: flex;
   grid-area:3/2/3/6;
   justify-content: center;
-  margin-bottom: 3.2vh;
 }
 
 .cl_img {
@@ -1112,7 +1105,6 @@ nav a {
   height: 40vh;
 }
 
-
 .cent_img {
   background-image: url("../images/brand_logocomp_m.jpg");
   background-position: center center;
@@ -1303,6 +1295,7 @@ nav a {
   background-position: center bottom;
   background-repeat: no-repeat;
   min-height: 50vh;
+
 }
 
 .change_shell {
@@ -1370,11 +1363,6 @@ nav a {
 
 .concl_img_back {
   background-image: linear-gradient(#BBDCE5, #109AFE);:
-}
-.concl_img_cont {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
 }
 
 .cncl_desk_img {
@@ -1965,7 +1953,7 @@ nav a {
   .selected {
     background-color: #F2EFED;
     grid-area: 1/2/1/12;
-    padding: 0;
+    padding: 0 8.4vw;
   }
 
   .feat_project {
