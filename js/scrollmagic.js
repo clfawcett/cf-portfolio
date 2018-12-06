@@ -20,6 +20,19 @@ $(document).ready(function(){
   .setClassToggle('#headbg', 'bg-change')
   .addTo(controller);
 
+  //loop through each .navbar element
+  $('.navbar').each(function() {
+
+    //pin the navbar
+    var pinMainNavScene = new ScrollMagic.Scene ({
+      triggerElement: this,
+      triggerHook: 0
+    })
+    .setPin(this)
+    .addTo(controller);
+  })
+
+
   //loop through each .section element
   $('.section').each(function() {
 
@@ -76,3 +89,4 @@ $(document).ready(function(){
   .setClassToggle('.load_cont', 'fade-in')
   .addTo(controller);
 })
+
