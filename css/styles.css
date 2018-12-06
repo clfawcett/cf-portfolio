@@ -55,8 +55,8 @@ footer {
   z-index: 2;
 }
 
-.img {
-  vertical-align: center;
+header {
+  grid-area: 1/1/1/1;
 }
 
 .load_cont {
@@ -69,7 +69,6 @@ footer {
   opacity: 1;
   transform: translateX(0);
 }
-
 
 
 /**** typography ****/
@@ -318,6 +317,17 @@ strong{
   color: rgba(65,65,65,1);
 }
 
+#menu_links {
+  background-color: #414141;
+  bottom: 0;
+  display: none;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
 
 /**** header  ****/
 
@@ -848,17 +858,20 @@ nav a {
 
 .chart1_title {
   grid-area: 1/2/1/6
+
 }
 
 .chart1 {
   grid-area: 2/2/2/6;
 
+
 }
 
-.cl {
+.percent1, .percent2, .percent3, .percent4 {
   display: flex;
   grid-area:3/2/3/6;
   justify-content: center;
+  margin-bottom: 3.2vh;
 }
 
 .cl_img {
@@ -1099,6 +1112,7 @@ nav a {
   height: 40vh;
 }
 
+
 .cent_img {
   background-image: url("../images/brand_logocomp_m.jpg");
   background-position: center center;
@@ -1289,7 +1303,6 @@ nav a {
   background-position: center bottom;
   background-repeat: no-repeat;
   min-height: 50vh;
-
 }
 
 .change_shell {
@@ -1357,6 +1370,11 @@ nav a {
 
 .concl_img_back {
   background-image: linear-gradient(#BBDCE5, #109AFE);:
+}
+.concl_img_cont {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .cncl_desk_img {
